@@ -1,7 +1,7 @@
 
 
 import Image from "next/image";
-
+import Link from "next/link"
 const ProductGrid = () => {
   const products = [
     {
@@ -139,9 +139,9 @@ const ProductGrid = () => {
       originalPrice: null,
       img: "/sofa3.png",
       isNew: true,
-    },
+     },
   
-  ];
+   ];
 
   return (
     <div className="p-6">
@@ -175,17 +175,17 @@ const ProductGrid = () => {
 
             {/* Hover Overlay */}
             <div className="absolute inset-0 bg-gray-800 bg-opacity-50 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center">
-              <button className="bg-white text-black px-4 py-2 rounded-md mb-4 shadow hover:shadow-lg">
+              <Link href={`{product.id}`}><button className="bg-white text-black px-4 py-2 rounded-md mb-4 shadow hover:shadow-lg">
                 Add to Cart
-              </button>
+              </button></Link>
               <div className="flex space-x-4 text-white">
                 <span className="cursor-pointer hover:text-gray-300">🔗 Share</span>
                 <span className="cursor-pointer hover:text-gray-300">🔄 Compare</span>
                 <span className="cursor-pointer hover:text-gray-300">❤️ Like</span>
-              </div>
+             </div>
             </div>
 
-            {/* Product Info */}
+             {/* Product Info */}
             <div className="p-4 bg-slate-200">
               <h3 className="text-lg font-semibold">{product.name}</h3>
               <p className="text-sm text-gray-500 mb-2">
@@ -211,14 +211,14 @@ const ProductGrid = () => {
           2
         </button>
         <button className="bg-rose-50 border px-4 py-2 rounded-md shadow hover:shadow-lg">
-          3
-        </button>
-        <button className="bg-rose-50 text-black px-6 py-2 rounded-md shadow hover:shadow-lg">
+         3
+       </button>
+      <button className="bg-rose-50 text-black px-6 py-2 rounded-md shadow hover:shadow-lg">
           Next
         </button>
       </div>
     </div>
-  );
-};
+   );
+ };
 
 export default ProductGrid;

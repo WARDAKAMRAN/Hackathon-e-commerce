@@ -50,7 +50,7 @@ const Header = () => {
         </div>
 
         {/* Icons Section */}
-        <div className="flex items-center space-x-8 text-gray-600">
+        <div className="flex items-center space-x-2 lg:space-x-8 text-gray-600">
           {/* Search Icon */}
           <button
             className="hover:text-yellow-500 transition-all duration-300"
